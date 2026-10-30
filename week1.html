@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Week 1 — Introduction to Databases</title>
   <script src="https://onatlou1015-tech.github.io/javafiles/digital-clock.js"></script>
-    <script src="https://onatlou1015-tech.github.io/javafiles/bible-verse.js"></script>
+  <script src="https://onatlou1015-tech.github.io/javafiles/bible-verse.js"></script>
   <style>
     * {
       margin: 0;
@@ -88,7 +89,8 @@
       color: #2B2018;
     }
 
-    ul, ol {
+    ul,
+    ol {
       margin: 10px 0 15px 25px;
       color: #2B2018;
     }
@@ -399,14 +401,26 @@
 
     /* Responsive */
     @media (max-width: 600px) {
-      header h1 { font-size: 1.5em; }
-      section, .teacher-instructions { padding: 22px; }
-      .outcome-item { flex-direction: column; }
+      header h1 {
+        font-size: 1.5em;
+      }
+
+      section,
+      .teacher-instructions {
+        padding: 22px;
+      }
+
+      .outcome-item {
+        flex-direction: column;
+      }
+
       .nav-buttons {
         flex-direction: column;
         padding: 20px;
       }
-      .next-btn, .back-btn {
+
+      .next-btn,
+      .back-btn {
         width: 100%;
         text-align: center;
         margin-left: 0;
@@ -414,6 +428,7 @@
     }
   </style>
 </head>
+
 <body>
 
   <div class="container">
@@ -429,8 +444,10 @@
     <section>
       <h2>Welcome!</h2>
       <div class="welcome">
-        <p>Every time you use GCash, scroll through Facebook, or order from Lazada — a <strong>database</strong> is working behind the scenes.</p>
-        <p>This week, you'll learn what a database is, why it matters, and how to create your very first table. No experience needed — just curiosity.</p>
+        <p>Every time you use GCash, scroll through Facebook, or order from Lazada — a <strong>database</strong> is
+          working behind the scenes.</p>
+        <p>This week, you'll learn what a database is, why it matters, and how to create your very first table. No
+          experience needed — just curiosity.</p>
         <p>By the end of this lesson, you'll have your own table with data you can query.</p>
       </div>
     </section>
@@ -445,17 +462,20 @@
 
         <div class="outcome-item">
           <span class="bloom-tag analyze">ANALYZE</span>
-          <span class="outcome-text">Differentiate between a database, a table, a row, and a column by examining real-world systems such as social media, banking, and school records.</span>
+          <span class="outcome-text">Differentiate between a database, a table, a row, and a column by examining
+            real-world systems such as social media, banking, and school records.</span>
         </div>
 
         <div class="outcome-item">
           <span class="bloom-tag evaluate">EVALUATE</span>
-          <span class="outcome-text">Justify why databases are essential for real-life services by comparing them to non-digital storage methods like paper records and spreadsheets.</span>
+          <span class="outcome-text">Justify why databases are essential for real-life services by comparing them to
+            non-digital storage methods like paper records and spreadsheets.</span>
         </div>
 
         <div class="outcome-item">
           <span class="bloom-tag create">CREATE</span>
-          <span class="outcome-text">Construct a working <code>students</code> table in phpMyAdmin and populate it with at least 5 records using SQL commands.</span>
+          <span class="outcome-text">Construct a working <code>students</code> table in phpMyAdmin and populate it with
+            at least 5 records using SQL commands.</span>
         </div>
       </div>
     </section>
@@ -463,7 +483,8 @@
     <!-- What is a Database -->
     <section>
       <h2>What is a Database?</h2>
-      <p>A <strong>database</strong> is an organized collection of data that can be easily accessed, managed, and updated.</p>
+      <p>A <strong>database</strong> is an organized collection of data that can be easily accessed, managed, and
+        updated.</p>
       <p>Think of it like a <strong>filing cabinet</strong>:</p>
       <ul>
         <li>The <strong>cabinet</strong> is the database</li>
@@ -519,24 +540,47 @@
           <th>Term</th>
           <th>What It Means</th>
         </tr>
-        <tr><td>Database</td><td>An organized collection of data</td></tr>
-        <tr><td>Table</td><td>A collection of related data — like a spreadsheet</td></tr>
-        <tr><td>Row</td><td>One record in a table (one student, one order)</td></tr>
-        <tr><td>Column</td><td>One field in a table (name, age, grade)</td></tr>
-        <tr><td>Field</td><td>Another word for a column</td></tr>
-        <tr><td>Record</td><td>Another word for a row</td></tr>
+        <tr>
+          <td>Database</td>
+          <td>An organized collection of data</td>
+        </tr>
+        <tr>
+          <td>Table</td>
+          <td>A collection of related data — like a spreadsheet</td>
+        </tr>
+        <tr>
+          <td>Row</td>
+          <td>One record in a table (one student, one order)</td>
+        </tr>
+        <tr>
+          <td>Column</td>
+          <td>One field in a table (name, age, grade)</td>
+        </tr>
+        <tr>
+          <td>Field</td>
+          <td>Another word for a column</td>
+        </tr>
+        <tr>
+          <td>Record</td>
+          <td>Another word for a row</td>
+        </tr>
       </table>
     </section>
 
     <!-- Code Section -->
     <section>
       <h2>Create Your First Table</h2>
-      <p>Now it's your turn. Open <strong>phpMyAdmin</strong> in XAMPP and try the code below. This creates a table called <code>students</code> and adds 5 records.</p>
+      <p>Now it's your turn. Open <strong>phpMyAdmin</strong> in XAMPP and try the code below. This creates a table
+        called <code>students</code> and adds 5 records.</p>
+      <p style="font-style: oblique;">CREATE DATABASE IF NOT EXISTS school_db;</p>
+
+
+
 
       <h3>Step 1: Create the table</h3>
       <div class="code-box">
         <span class="code-label">SQL</span>
-        <pre><span class="keyword">CREATE TABLE</span> students (
+        <pre><span class="keyword">CREATE TABLE IF NOT EXISTS</span> students (
   id <span class="keyword">INT AUTO_INCREMENT PRIMARY KEY</span>,
   name <span class="keyword">VARCHAR</span>(50),
   grade <span class="keyword">INT</span>,
@@ -563,7 +607,8 @@
       </div>
 
       <div class="tip">
-        Copy each block into phpMyAdmin's SQL tab and click <strong>Go</strong>. You should see your 5 students appear in a table.
+        Copy each block into phpMyAdmin's SQL tab and click <strong>Go</strong>. You should see your 5 students appear
+        in a table.
       </div>
     </section>
 
@@ -598,8 +643,10 @@
     <div class="teacher-instructions">
       <h2>Teacher Instructions</h2>
       <ul>
-        <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</li>
-        <li>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
+        <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et
+          dolore magna aliqua.</li>
+        <li>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+        </li>
         <li>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</li>
       </ul>
     </div>
@@ -613,4 +660,5 @@
   </div>
 
 </body>
+
 </html>
