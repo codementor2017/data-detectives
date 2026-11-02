@@ -5,8 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Week 1 — Introduction to Databases</title>
-    <script src="https://onatlou1015-tech.github.io/javafiles/digital-clock.js"></script>
-    <script src="https://onatlou1015-tech.github.io/javafiles/bible-verse.js"></script>
+    <script
+      src="https://onatlou1015-tech.github.io/javafiles/digital-clock.js"></script>
+    <script
+      src="https://onatlou1015-tech.github.io/javafiles/bible-verse.js"></script>
     <style>
       * {
         margin: 0;
@@ -444,11 +446,14 @@
       <section>
         <h2>Welcome!</h2>
         <div class="welcome">
-          <p>Every time you use PromptPay, scroll through Facebook, or order from Lazada — a <strong>database</strong> is
+          <p>Every time you use PromptPay, scroll through Facebook, or order
+            from Lazada — a <strong>database</strong> is
             working behind the scenes.</p>
-          <p>This week, you'll learn what a database is, why it matters, and how to create your very first table. No
+          <p>This week, you'll learn what a database is, why it matters, and how
+            to create your very first table. No
             experience needed — just curiosity.</p>
-          <p>By the end of this lesson, you'll have your own table with data you can query.</p>
+          <p>By the end of this lesson, you'll have your own table with data you
+            can query.</p>
         </div>
       </section>
 
@@ -462,19 +467,24 @@
 
           <div class="outcome-item">
             <span class="bloom-tag analyze">ANALYZE</span>
-            <span class="outcome-text">Differentiate between a database, a table, a row, and a column by examining
-              real-world systems such as social media, banking, and school records.</span>
+            <span class="outcome-text">Differentiate between a database, a
+              table, a row, and a column by examining
+              real-world systems such as social media, banking, and school
+              records.</span>
           </div>
 
           <div class="outcome-item">
             <span class="bloom-tag evaluate">EVALUATE</span>
-            <span class="outcome-text">Justify why databases are essential for real-life services by comparing them to
-              non-digital storage methods like paper records and spreadsheets.</span>
+            <span class="outcome-text">Justify why databases are essential for
+              real-life services by comparing them to
+              non-digital storage methods like paper records and
+              spreadsheets.</span>
           </div>
 
           <div class="outcome-item">
             <span class="bloom-tag create">CREATE</span>
-            <span class="outcome-text">Construct a working <code>students</code> table in phpMyAdmin and populate it
+            <span class="outcome-text">Construct a working <code>students</code>
+              table in phpMyAdmin and populate it
               with
               at least 5 records using SQL commands.</span>
           </div>
@@ -484,7 +494,8 @@
       <!-- What is a Database -->
       <section>
         <h2>What is a Database?</h2>
-        <p>A <strong>database</strong> is an organized collection of data that can be easily accessed, managed, and
+        <p>A <strong>database</strong> is an organized collection of data that
+          can be easily accessed, managed, and
           updated.</p>
         <p>Think of it like a <strong>filing cabinet</strong>:</p>
         <ul>
@@ -494,7 +505,8 @@
           <li>The <strong>fields on each paper</strong> are the columns</li>
         </ul>
         <div class="tip">
-          Without databases, every app you use would forget who you are the moment you close it.
+          Without databases, every app you use would forget who you are the
+          moment you close it.
         </div>
       </section>
 
@@ -505,25 +517,32 @@
         <div class="example-box">
           <h3>📱 Social Media</h3>
           <p>When you post on Facebook, your post is saved in a database.</p>
-          <p class="where">Stored: your name, the post text, the time, likes, comments.</p>
+          <p class="where">Stored: your name, the post text, the time, likes,
+            comments.</p>
         </div>
 
         <div class="example-box">
           <h3>🛒 Online Shopping</h3>
-          <p>When you order from Lazada or Shopee, your order is stored in a database.</p>
-          <p class="where">Stored: your address, items ordered, price, delivery status.</p>
+          <p>When you order from Lazada or Shopee, your order is stored in a
+            database.</p>
+          <p class="where">Stored: your address, items ordered, price, delivery
+            status.</p>
         </div>
 
         <div class="example-box">
           <h3>🏫 School Records</h3>
-          <p>Your grades, attendance, and student info are stored in a school database.</p>
-          <p class="where">Stored: student ID, name, subjects, scores, absences.</p>
+          <p>Your grades, attendance, and student info are stored in a school
+            database.</p>
+          <p class="where">Stored: student ID, name, subjects, scores,
+            absences.</p>
         </div>
 
         <div class="example-box">
           <h3>🏥 Hospital Records</h3>
-          <p>Patient information, appointments, and test results are stored in a database.</p>
-          <p class="where">Stored: patient name, diagnosis, medicines, visit dates.</p>
+          <p>Patient information, appointments, and test results are stored in a
+            database.</p>
+          <p class="where">Stored: patient name, diagnosis, medicines, visit
+            dates.</p>
         </div>
 
         <div class="example-box">
@@ -571,17 +590,16 @@
       <!-- Code Section -->
       <section>
         <h2>Create Your First Table</h2>
-        <p>Now it's your turn. Open <strong>phpMyAdmin</strong> in XAMPP and try the code below. This creates a table
+        <p>Now it's your turn. Open <strong>phpMyAdmin</strong> in XAMPP and try
+          the code below. This creates a table
           called <code>students</code> and adds 5 records.</p>
-        
 
-  <h3>Create database</h3>
+        <h3>Create database</h3>
         <div class="code-box">
           <span class="code-label">SQL</span>
           <pre><span class="keyword">CREATE DATABASE IF NOT EXISTS</span> temp_db;</pre>
           <pre><span class="keyword">USE DATABASE</span> temp_db;</pre>
         </div>
-
 
         <h3>Step 1: Create the table</h3>
         <div class="code-box">
@@ -613,7 +631,8 @@
         </div>
 
         <div class="tip">
-          Copy each block into phpMyAdmin's SQL tab and click <strong>Go</strong>. You should see your 5 students appear
+          Copy each block into phpMyAdmin's SQL tab and click
+          <strong>Go</strong>. You should see your 5 students appear
           in a table.
         </div>
       </section>
@@ -651,16 +670,22 @@
         <ul>
           <li>Build your own database from scratch.</li>
           <li>Inside it, create one table and fill it with 10 rows of data.</li>
-          <li>Your table should have 7 columns (fields), and all the fields should be related to one another, meaning they all describe the same kind of thing (e.g., a student, a product, or an order).</li>
-          <li>After running your SQL commands in phpMyAdmin, take a screenshot that captures the complete command (all the SQL code you entered) and the results (the table showing your data).</li>
-          <li>Submit your screenshot to <i>onatlou1015@gmail.com</i>.</li>          
+          <li>Your table should have 7 columns (fields), and all the fields
+            should be related to one another, meaning they all describe the same
+            kind of thing (e.g., a student, a product, or an order).</li>
+          <li>After running your SQL commands in phpMyAdmin, copy all the
+            codes.</li>
+          <li>Submit to <i>onatlou1015@gmail.com</i>.</li>
+          <li>Subject: xxxxx-week1</li>
+          <li>Message:Copyall the code and paste.</li>
         </ul>
       </div>
 
       <!-- Navigation -->
       <div class="nav-buttons">
         <a href="index.html" class="back-btn">&larr; Back to Unit Index</a>
-        <a href="week2.html" class="next-btn">Next: Retrieving Data (SELECT and WHERE) &rarr;</a>
+        <a href="week2.html" class="next-btn">Next: Retrieving Data (SELECT and
+          WHERE) &rarr;</a>
       </div>
 
     </div>
